@@ -2,5 +2,5 @@ class Client
 {
 public:
 	Client(void);
-	int send_request(const Hub &hub, const std::string &request);
+	int send_request(Hub const &hub, Request const &request);
 }
