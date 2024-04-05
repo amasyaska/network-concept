@@ -1,7 +1,16 @@
+// magic numbers
+
+#define ERROR_ADDING 0
+#define SUCCESSFUL_ADDING 1
+
 class Hub
 {
+	/*
+	 * this class is a container for nodes
+	 */
 public:
 	Hub(void);
-	int get_request(Client const *client, Request const &request);
-	int send_request(Server const *server, Request const &request);
+	void ~Hub(void);
+
+	int add_node(Node const *ptr_node);
 }

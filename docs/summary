@@ -1,0 +1,27 @@
+TASKS:
+# 1 - implement unique addresses for every network node
+	- implement object to "register" nodes (I dont think using address as a field in object is safe enough, because maybe somehow one object will be able to change it's address thus will be able to get not their own requests.)
+# 2 - implement Hub class to register nodes.
+	- Hub class is
+
+CLASSES:
+Hub:
+	is a container for nodes
+
+
+FUNCTIONS:
+
+PROBLEMS:
+- how to identify every node of a network?
+	when we are getting a task to send request, a problem arises: where? thus, we need to identify nodes somehow. I suggest to use addresses (amoa).
+- do we have to set unique addresses for every node of a network? I think yes.
+
+HIERARCHY:
+
+				Node
+			/			\
+		Client				Server
+			\			/
+				P2PNode
+
+
