@@ -6,7 +6,7 @@ Hub::~Hub()
 {
 }
 
-int Hub::add_node(Node const *ptr_node)
+int Hub::add_node(Node * const ptr_node)
 {
 	// adds pair and increments address_top
 	try

@@ -1,3 +1,8 @@
+HOURS SPENT: 2
+
+NEXT COMMIT:
+	now Hub::add_node() and Hub::remove_node() get const pointer instead of pointer to const (bug fixed)
+
 TASKS:
 # 1 - implement unique addresses for every network node
 	- implement object to "register" nodes (I dont think using address as a field in object is safe enough, because maybe somehow one object will be able to change it's address thus will be able to get not their own requests.)

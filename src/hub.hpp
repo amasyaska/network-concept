@@ -16,6 +16,6 @@ public:
 	Hub(void);
 	~Hub(void);
 
-	int add_node(Node const *ptr_node);
-	int remove_node(Node const *ptr_node);
+	int add_node(Node * const ptr_node);
+	int remove_node(Node * const ptr_node);
 };

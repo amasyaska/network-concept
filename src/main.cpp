@@ -19,10 +19,11 @@ int main()
 	std::cout << ERROR_ADDING << std::endl;
 	
 	HubDebug *ptr_hub = new HubDebug();
-	Node *ptr_node1 = new Node();
-	Node *ptr_node2 = new Node();
-	ptr_hub->add_node(ptr_node1);
+	Node ptr_node1;
+	Node ptr_node2;
+
+	ptr_hub->add_node(&ptr_node1);
 	ptr_hub->get_nodes_to_str();
-	ptr_hub->add_node(ptr_node2);
+	ptr_hub->add_node(&ptr_node2);
 	ptr_hub->get_nodes_to_str();
 }
