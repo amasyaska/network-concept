@@ -1,7 +1,7 @@
 # network-concept
 🕸️😎
 ## Description
-Implementation of the concept of an abstract network of nodes, providing the ability to exchange information between nodes.\
+Implementation of the concept of an abstract network of nodes, providing the ability to exchange information between them.\
 \
 Written in C++ using object-oriented paradigm.
 
