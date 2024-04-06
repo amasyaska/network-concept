@@ -2,14 +2,28 @@ TASKS:
 # 1 - implement unique addresses for every network node
 	- implement object to "register" nodes (I dont think using address as a field in object is safe enough, because maybe somehow one object will be able to change it's address thus will be able to get not their own requests.)
 # 2 - implement Hub class to register nodes.
-	- Hub class is
+	- Hub class is a container for Nodes
 
 CLASSES:
-Hub:
-	is a container for nodes
+
+# Node:
+	The main structural element of the network.
+
+# Hub:
+Description:
+	Container for Nodes that manipulates messages between nodes and organizes local addressing between them.
+	Addressing: 
+Attributes:
+	container: container for nodes and their addresses. implemented as a vector of pairs.
+	address_top: when we add new node, we increment address_top
+Methods:	
+	add_node()
+	remove_node(): not implemented yet	
 
 
 FUNCTIONS:
+
+absent
 
 PROBLEMS:
 - how to identify every node of a network?
