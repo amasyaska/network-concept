@@ -1,0 +1,7 @@
+Node::Node()
+{
+}
+
+Node::~Node()
+{
+}
