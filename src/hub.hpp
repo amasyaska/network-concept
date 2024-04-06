@@ -10,7 +10,7 @@ class Hub
 	 */
 private:
 	// hashtable field (we can use vector, but how will we be founding element by index, I suggest to use hashtable (object -> address) instead) (STL doesn't have hashtable implemented bruh)
-	std::vector< std::pair<Node *, unsigned long long> > container;		// pair: node pointer to address (uint64_t)
+	std::vector< std::pair<const Node *, unsigned long long> > container;		// pair: node pointer to address (uint64_t)
 	unsigned long long address_top;						// when we add new node, we add to address_top
 public:
 	Hub(void);
