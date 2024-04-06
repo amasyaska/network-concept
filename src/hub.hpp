@@ -14,7 +14,8 @@ private:
 	unsigned long long address_top;						// when we add new node, we add to address_top
 public:
 	Hub(void);
-	void ~Hub(void);
+	~Hub(void);
 
 	int add_node(Node const *ptr_node);
-}
+	int remove_node(Node const *ptr_node);
+};
