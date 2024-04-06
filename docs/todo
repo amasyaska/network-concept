@@ -1,2 +1,15 @@
-# 1 is adding try catch block to Hub::add_node() good idea?
-# 2 implement Hub::remove_node()
+# - task
+#+ - task finished
+
+TASKS:
+#+ 1 is adding try catch block to Hub::add_node() good idea? I think yes
+# 2 - implement Hub::remove_node()
+#+ 3 - implement unique addresses for every network node
+	- implement object to "register" nodes (I dont think using address as a field in object is safe enough, because maybe somehow one object will be able to change it's address thus will be able to get not their own requests.)
+#+ 4 - implement Hub class to register nodes.
+	- Hub class is a container for Nodes
+
+# 5 - implement Client class as a descendant of Node
+	- update documentation
+# 6 - implement Server class as a descendant of Node
+	- update documentation

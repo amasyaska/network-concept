@@ -1,13 +1,7 @@
-HOURS SPENT: 2
+HOURS SPENT: 3
 
 NEXT COMMIT:
-	now Hub::add_node() and Hub::remove_node() get const pointer instead of pointer to const (bug fixed)
 
-TASKS:
-# 1 - implement unique addresses for every network node
-	- implement object to "register" nodes (I dont think using address as a field in object is safe enough, because maybe somehow one object will be able to change it's address thus will be able to get not their own requests.)
-# 2 - implement Hub class to register nodes.
-	- Hub class is a container for Nodes
 
 CLASSES:
 
@@ -35,6 +29,8 @@ PROBLEMS:
 	when we are getting a task to send request, a problem arises: where? thus, we need to identify nodes somehow. I suggest to use addresses (amoa).
 - do we have to set unique addresses for every node of a network? I think yes.
 
+amoa ~ &
+
 HIERARCHY:
 
 				Node
@@ -43,4 +39,10 @@ HIERARCHY:
 			\			/
 				P2PNode
 
-
+IDEAS:
+# 1 message_get method for node that will be invoked by Hub, and implementation of the method will be dependent on a class descendant () (amoa), so every different implementation of the method will be peculiar "message handler" &
+# 2 Hub pointer field in Node class &
+# 3 get_address method for Node class to get address if Node connected to Hub
+# 4 is_connected_to_hub method for Node class to check if Node connected to Hub, throw exception otherwise in get_address &
+# 5 Node Client will have method to send message, this method will call private method of Hub to send message between two Nodes &
+# 6 Node Server will have method to get message, which will be called by Hub after getting message &, implementation #1
