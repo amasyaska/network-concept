@@ -1,5 +1,7 @@
 Hub::Hub()
 {
+	this->container = {};
+	this->address_top = 0;	
 }
 
 Hub::~Hub()
