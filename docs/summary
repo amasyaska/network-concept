@@ -1,7 +1,9 @@
-HOURS SPENT: 4h 20min
+HOURS SPENT: 4h 40min
 
 NEXT COMMIT:
-	according to ideas 8 and 9, added public method Hub::request_to_send_message_from_client_to_server, and protected method Hub::send_message_from_client_to_server
+	according to idea #10 added Node Hub pointer private field
+	added Node::get_hub() method
+	updated Node constructor method to set hub_ptr to nullptr
 	updated documentation
 
 CLASSES:
@@ -9,6 +11,10 @@ CLASSES:
 # Node:
 Description:
 	The main structural element of the network.
+Attributes:
+	hub_ptr:
+Methods:
+	get_hub(): returns hub_ptr
 
 # Hub:
 Description:
@@ -62,3 +68,4 @@ IDEAS:
 # 7 Should we make Node, NodeClient and NodeServer abstract classes? (i think if every node could be whether ONLY server or ONLY client or both, it can lead to complications in understanding network (we will have to check if node is server to check if we can send message to it, ))
 # 8 I think Hub should be superior to Node to simplify understanding & I mean, I guess we should say that Hub masters Node, but Node can't do nothing to Hub, can't change anything &. this way we won't expect any changes in Hub from Node &.
 # 9 I think Node shouldn't use Hub's functionality, Hub is superior to Node, maybe implement this not as Node using Hub method, but making request to Hub to use this &
+# 10 Add Hub pointer field for Node to save Hub which Node is connected to &

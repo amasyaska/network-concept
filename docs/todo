@@ -14,3 +14,4 @@ TASKS:
 # 6 - implement Server class as a descendant of Node
 	- update documentation
 # 7 - does container contain pointer to constant?
+# 8 - throw exception in Node::get_hub
