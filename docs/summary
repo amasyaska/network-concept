@@ -1,7 +1,7 @@
-HOURS SPENT: 3
+HOURS SPENT: 4
 
 NEXT COMMIT:
-
+	added ClientNode, removed Client class (client.hpp and client.cpp), updated documentation
 
 CLASSES:
 
@@ -17,7 +17,13 @@ Attributes:
 	address_top: when we add new node, we increment address_top
 Methods:	
 	add_node()
-	remove_node(): not implemented yet	
+	remove_node(): not implemented yet
+
+# NodeClient : Node
+	Descendant of Node that implements ONLY client part (can ONLY send messages, and can't get them)
+
+# NodeServer: Node 
+	Descendant of Node that implements ONLY server part (can ONLY get messages, and can't send them)
 
 
 FUNCTIONS:
@@ -46,3 +52,4 @@ IDEAS:
 # 4 is_connected_to_hub method for Node class to check if Node connected to Hub, throw exception otherwise in get_address &
 # 5 Node Client will have method to send message, this method will call private method of Hub to send message between two Nodes &
 # 6 Node Server will have method to get message, which will be called by Hub after getting message &, implementation #1
+# 7 Should we make Node, NodeClient and NodeServer abstract classes? (i think if every node could be whether ONLY server or ONLY client or both, it can lead to complications in understanding network (we will have to check if node is server to check if we can send message to it, ))

@@ -1,0 +1,4 @@
+class NodeClient : public Node
+{
+
+}
