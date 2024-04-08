@@ -1,28 +1,35 @@
-HOURS SPENT: 4
+HOURS SPENT: 4h 20min
 
 NEXT COMMIT:
-	added ClientNode, removed Client class (client.hpp and client.cpp), updated documentation
+	according to ideas 8 and 9, added public method Hub::request_to_send_message_from_client_to_server, and protected method Hub::send_message_from_client_to_server
+	updated documentation
 
 CLASSES:
 
 # Node:
+Description:
 	The main structural element of the network.
 
 # Hub:
 Description:
 	Container for Nodes that manipulates messages between nodes and organizes local addressing between them.
+	Send message methods return status codes.
 	Addressing: 
 Attributes:
 	container: container for nodes and their addresses. implemented as a vector of pairs.
 	address_top: when we add new node, we increment address_top
-Methods:	
+Methods:
+	request_to_send_message_from_client_to_server(): for external use
+	send_message_from_client_to_server(): for internal use
 	add_node()
 	remove_node(): not implemented yet
 
 # NodeClient : Node
+Description:
 	Descendant of Node that implements ONLY client part (can ONLY send messages, and can't get them)
 
 # NodeServer: Node 
+Description:
 	Descendant of Node that implements ONLY server part (can ONLY get messages, and can't send them)
 
 
@@ -53,3 +60,5 @@ IDEAS:
 # 5 Node Client will have method to send message, this method will call private method of Hub to send message between two Nodes &
 # 6 Node Server will have method to get message, which will be called by Hub after getting message &, implementation #1
 # 7 Should we make Node, NodeClient and NodeServer abstract classes? (i think if every node could be whether ONLY server or ONLY client or both, it can lead to complications in understanding network (we will have to check if node is server to check if we can send message to it, ))
+# 8 I think Hub should be superior to Node to simplify understanding & I mean, I guess we should say that Hub masters Node, but Node can't do nothing to Hub, can't change anything &. this way we won't expect any changes in Hub from Node &.
+# 9 I think Node shouldn't use Hub's functionality, Hub is superior to Node, maybe implement this not as Node using Hub method, but making request to Hub to use this &

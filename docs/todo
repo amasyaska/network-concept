@@ -13,3 +13,4 @@ TASKS:
 	- update documentation
 # 6 - implement Server class as a descendant of Node
 	- update documentation
+# 7 - does container contain pointer to constant?
