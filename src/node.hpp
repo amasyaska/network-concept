@@ -1,6 +1,5 @@
 class Node
 {
-// make Hub friend class
 private:
 	Hub * hub_ptr;
 protected:
@@ -9,4 +8,6 @@ public:
 	Node();
 	~Node();
 	Hub * get_hub_pointer();
+
+	friend class Hub;
 };

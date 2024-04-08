@@ -11,7 +11,7 @@ Node::get_hub_pointer()
 {
 	if (this->hub_ptr == nullptr)
 	{
-		// throw exception
+		throw std::logic_error("No Hub assigned");
 	}
 	return this->hub_ptr;
 }

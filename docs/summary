@@ -1,8 +1,8 @@
-HOURS SPENT: 4h 40min
+HOURS SPENT: 5h 20min
 
 NEXT COMMIT:
-	now Node hub pointer is not constant
-	added Node::set_hub_pointer()
+	Hub now is friend class for Node
+	added exception throw to Node::get_hub_pointer
 	updated documentation
 
 CLASSES:
