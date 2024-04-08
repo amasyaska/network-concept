@@ -7,7 +7,7 @@ Node::~Node()
 {
 }
 
-Node::get_hub()
+Node::get_hub_pointer()
 {
 	if (this->hub_ptr == nullptr)
 	{

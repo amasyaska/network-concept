@@ -1,10 +1,7 @@
 HOURS SPENT: 4h 40min
 
 NEXT COMMIT:
-	according to idea #10 added Node Hub pointer private field
-	added Node::get_hub() method
-	updated Node constructor method to set hub_ptr to nullptr
-	updated documentation
+	renamed Node::get_hub to Node::get_hub_pointer
 
 CLASSES:
 
@@ -14,7 +11,7 @@ Description:
 Attributes:
 	hub_ptr:
 Methods:
-	get_hub(): returns hub_ptr
+	get_hub_pointer(): returns hub_ptr
 
 # Hub:
 Description:

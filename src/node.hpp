@@ -5,5 +5,5 @@ private:
 public:
 	Node();
 	~Node();
-	Hub * get_hub();
+	Hub * get_hub_pointer();
 };
