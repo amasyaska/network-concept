@@ -15,3 +15,8 @@ Node::get_hub_pointer()
 	}
 	return this->hub_ptr;
 }
+
+Node::set_hub_pointer(Hub * new_hub_ptr)
+{
+	this->hub_ptr = new_hub_ptr;
+}

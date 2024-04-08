@@ -1,7 +1,9 @@
 HOURS SPENT: 4h 40min
 
 NEXT COMMIT:
-	renamed Node::get_hub to Node::get_hub_pointer
+	now Node hub pointer is not constant
+	added Node::set_hub_pointer()
+	updated documentation
 
 CLASSES:
 
@@ -12,6 +14,7 @@ Attributes:
 	hub_ptr:
 Methods:
 	get_hub_pointer(): returns hub_ptr
+	set_hub_pointer(): sets hub_ptr
 
 # Hub:
 Description:

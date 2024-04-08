@@ -1,7 +1,10 @@
 class Node
 {
+// make Hub friend class
 private:
-	Hub * const hub_ptr;
+	Hub * hub_ptr;
+protected:
+	int set_hub_pointer(Hub * new_hub_ptr);
 public:
 	Node();
 	~Node();
